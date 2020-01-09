@@ -11,10 +11,23 @@ By considering the terms in the Fibonacci sequence whose values do not exceed
 four million, find the sum of the even-valued terms.
 --------------------------------------------------------------------------------
 Author: Michael A. Colon
-Date: 2020-JAN-08
+Date: 2020-JAN-09
 """
 def main():
-    print("Hello, world!")
+    n1 = 0
+    n2 = 1
+    sum = 0
+
+    while (n2 <= 4000000):
+        n_sum = n1 + n2
+
+        if (n_sum % 2 == 0):
+            sum += n_sum
+
+        n1 = n2
+        n2 = n_sum
+
+    print(sum)
 
 
 if __name__ == "__main__":
