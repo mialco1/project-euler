@@ -10,6 +10,16 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 Author: Michael A. Colon
 Date: 2020-JAN-09
 """
+def is_palindrome(n):
+	n_string = str(n)
+	reverse_string = n_string[::-1]
+
+	if n_string == reverse_string:
+		return True
+
+	return False
+
+
 def main():
     print("Hello, world!")
 
