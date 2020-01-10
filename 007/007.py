@@ -10,8 +10,10 @@ What is the 10 001st prime number?
 Author: Michael A. Colon
 Date: 2020-JAN-09
 """
+import math
+
 def is_prime(num):
-    if(num % 2 == 0):
+    if num > 2 and num % 2 == 0:
         return False
 
     # Can skip even numbers
@@ -24,7 +26,7 @@ def is_prime(num):
 
 
 def main():
-    print("Hello, world!")
+    print(is_prime(2))
 
 
 if __name__ == "__main__":
