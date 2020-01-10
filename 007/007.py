@@ -15,10 +15,12 @@ import math
 def is_prime(num):
     if num > 2 and num % 2 == 0:
         return False
-
+    elif num == 2:
+        return True
+        
     # Can skip even numbers
     # Only need to check values that are less than num / 2
-    for x in range(2, math.floor(num / 2), 2):
+    for x in range(3, math.ceil(num / 2), 2):
         if(num % x == 0):
             return False
 
