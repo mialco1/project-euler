@@ -52,7 +52,13 @@ def get_factors(num):
 
 
 def main():
-    print("Hello, world!")
+    factors = get_factors(600851475143)
+    factors.sort(reverse=True)
+
+    for f in factors:
+        if(is_prime(f)):
+            print(f)
+            break
 
 
 if __name__ == "__main__":
