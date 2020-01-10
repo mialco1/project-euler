@@ -26,7 +26,15 @@ def is_prime(num):
 
 
 def main():
-    print(is_prime(2))
+    count = 0
+    n = 1
+
+    while count < 10001:
+        n += 1 # This will make n = 2 on first pass
+        if is_prime(n):
+            count += 1
+
+    print(n)
 
 
 if __name__ == "__main__":
