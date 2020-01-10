@@ -24,6 +24,33 @@ def is_prime(num):
     return True
 
 
+def get_factors(num):
+    factors = [1, num]
+    half_value = 0
+
+    # Can start from halfway
+    if num % 2 > 0:
+        half_value = int(math.floor(num / 2))
+    else:
+        half_value = int(num / 2)
+        factors += [2]
+        factors.append(half_value)
+
+    i = 3
+    while i < half_value:
+        if num % i == 0:
+            factors.append(i)
+            half_value = num / i
+
+            if(int(half_value) not in factors):
+                factors.append(int(half_value))
+
+        i += 1
+
+    factors.sort() # Just for print() purposes
+    return factors
+
+
 def main():
     print("Hello, world!")
 
