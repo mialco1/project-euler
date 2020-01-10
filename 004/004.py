@@ -21,7 +21,19 @@ def is_palindrome(n):
 
 
 def main():
-    print("Hello, world!")
+    palindrome = -1
+
+    for i in range(999, 99, -1):
+        for j in range(999, 99, -1):
+            v = i * j
+            if is_palindrome(v):
+                if (v) > palindrome:
+                    palindrome = v
+
+    if(palindrome == -1):
+        print("Palindrome not found!")
+    else:
+        print(palindrome)
 
 
 if __name__ == "__main__":
