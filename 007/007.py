@@ -17,10 +17,10 @@ def is_prime(num):
         return False
     elif num == 2:
         return True
-        
+
     # Can skip even numbers
     # Only need to check values that are less than num / 2
-    for x in range(3, math.ceil(num / 2), 2):
+    for x in range(3, int(math.ceil(num / 2)), 2):
         if(num % x == 0):
             return False
 
